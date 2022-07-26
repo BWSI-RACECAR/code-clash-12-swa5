@@ -39,6 +39,7 @@ class Solution:
 
                 if i == 0: 
                     ary.insert(i,1)
+                    return ary
 
             else: 
                 ary[i] += 1
