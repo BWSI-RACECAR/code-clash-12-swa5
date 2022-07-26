@@ -21,7 +21,7 @@ That's cheating (because I have done it before...) so you must modify the list i
 Test Cases:
 a = [1, 2, 3]; output = [1, 2, 4]
 a = [9]; output = [1,0]
-a = [1, 4, 5, 9]; output = [1]
+a = [1, 4, 5, 9]; output = [1, 4, 6, 0]
 """
 
 class Solution:
@@ -31,19 +31,34 @@ class Solution:
 
         # TODO: Write code below to return a list "ary" with the solution to the prompt
         length = len(ary)
-
-        if length == 1 and ary[0] == 9:
-            ary = [1,0]
-            return ary 
-        if ary[length-1] == 9: 
-            ary = [1]
-            return ary
-
+        modify = False
         
-        else: 
-            ary[length-1] += 1 
+        if 9 in ary:
+            modify = True
 
-            return ary
+        if modify: 
+            index = ary.index(9)
+
+            if index == (length-1):
+                ary[index-1] += 1 
+                holder = ary[index-1] 
+                ary[index] = 0 
+
+            iter = 1
+            while True:
+                
+                if ary[iter] == holder: 
+                    break
+                ary[iter] = 0 
+                iter += 1
+
+
+
+        ary[length-1] += 1
+
+        return ary 
+
+
 
         
 
