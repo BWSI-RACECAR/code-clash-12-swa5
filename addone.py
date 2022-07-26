@@ -64,7 +64,7 @@ class Solution:
 
         while(ary[length]==9):
             ary[length] = 0
-            length -= 0
+            length -= 1
 
         
         if length < 0:
