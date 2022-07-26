@@ -30,36 +30,51 @@ class Solution:
         # return type: list
 
         # TODO: Write code below to return a list "ary" with the solution to the prompt
-        length = len(ary)
-        modify = False
+        # length = len(ary)
+        # modify = False
         
-        if 9 in ary:
-            modify = True
+        # if 9 in ary:
+        #     modify = True
 
-        if modify: 
-            index = ary.index(9)
+        # if modify: 
+        #     index = ary.index(9)
 
-            if index == (length-1):
-                ary[index-1] += 1 
-                holder = ary[index-1] 
-                ary[index] = 0 
+        #     if index == (length-1):
+        #         ary[index-1] += 1 
+        #         holder = ary[index-1] 
+        #         ary[index] = 0 
 
-            iter = 1
-            while True:
+        #     iter = 1
+        #     while True:
                 
-                if ary[iter] == holder: 
-                    break
-                ary[iter] = 0 
-                iter += 1
+        #         if ary[iter] == holder: 
+        #             break
+        #         ary[iter] = 0 
+        #         iter += 1
 
-            return ary
+        #     return ary
 
 
 
-        ary[length-1] += 1
+        # ary[length-1] += 1
+
+        # return ary 
+
+        length = len(ary) - 1
+
+        while(ary[length]==9):
+            ary[length] = 0
+            length -= 0
+
+        
+        if length < 0:
+            ary [1] + ary
+        
+        else: 
+            ary[length] += 1
+
 
         return ary 
-
 
 
         
