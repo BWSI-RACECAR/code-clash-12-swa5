@@ -67,7 +67,7 @@ class Solution:
             length -= 1
 
         
-        if length < 0:
+        if length == 0:
             ary [1] + ary
         
         else: 
