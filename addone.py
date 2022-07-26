@@ -45,7 +45,7 @@ class Solution:
                 ary[i] += 1
                 return ary
 
-            return ary
+        return ary
 
             
 
