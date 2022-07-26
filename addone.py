@@ -31,43 +31,55 @@ class Solution:
 
         # TODO: Write code below to return a list "ary" with the solution to the prompt
 
-        length = len(ary) - 1
+        lnt = len(ary)-1 
 
-        if length == 0: 
-            if ary[length] == 9: 
-                return [1,0]
-            
+        for i in range(lnt, -1, -1):
+            if ary[i] == 9: 
+                ary[i] = 0
+
+                if i == 0: 
+                    ary.insert(i,1)
+
             else: 
-                ary[length] += 1
+                ary[i] += 1
                 return ary
-        case = False 
-        change = True
 
-        while ary[length] == 9:
-           
-            ary[length] = 0
-
-            length -= 1
-
-            case = True
-            change = False
-
-
-        if case: 
-            ary[length] += 1
-
-        if change:
-            ary[length] += 1
-
-        return ary
+            return ary
 
             
 
-       
-       
-       
-       
-       
+
+
+        # length = len(ary) - 1
+
+        # if length == 0: 
+        #     if ary[length] == 9: 
+        #         return [1,0]
+            
+        #     else: 
+        #         ary[length] += 1
+        #         return ary
+        # case = False 
+        # change = True
+
+        # while ary[length] == 9:
+           
+        #     ary[length] = 0
+
+        #     length -= 1
+
+        #     case = True
+        #     change = False
+
+
+        # if case: 
+        #     ary[length] += 1
+
+        # if change:
+        #     ary[length] += 1
+
+        # return ary
+
        
        
         # length = len(ary)
