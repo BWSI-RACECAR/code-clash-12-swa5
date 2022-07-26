@@ -52,6 +52,8 @@ class Solution:
                 ary[iter] = 0 
                 iter += 1
 
+            return ary
+
 
 
         ary[length-1] += 1
